@@ -1,3 +1,4 @@
+import 'package:chat_app/core/service/storage_service.dart';
 import 'package:chat_app/screens/auth.dart';
 import 'package:chat_app/screens/chat.dart';
 import 'package:chat_app/screens/splash.dart';
@@ -9,7 +10,7 @@ import 'firebase_options.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-
+  StorageService.initialize();
   runApp(const App());
 }
 
